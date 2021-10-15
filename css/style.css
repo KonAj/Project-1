@@ -1,0 +1,247 @@
+body{
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+h1, h2, h3{
+    margin: 0;
+    padding: 1em 0;
+}
+
+p{
+    margin: 0;
+    padding: 1em 0;    
+}
+:root{
+    --main-radius:5px;
+    --main-padding:5px;
+}
+/*Grid Container for Home Page  */
+.container{
+    height: auto;
+    display: grid;
+    /* grid-gap: 3px; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.12fr 1fr 1.5fr 0.4fr;
+    grid-template-areas: 
+        "nav nav nav"
+        "main main main"
+        "content1 content2 content3"
+        "footer1 footer2 footer3";
+}
+
+/* Navbar Section */
+nav{
+   
+    background-color:lightblue;
+    grid-area: nav;
+    padding-left: px;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+.link{
+    text-decoration: none;
+    padding:var(--main-padding);
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #3A4752;
+    display: inline-block;
+}
+
+
+
+
+/* Main Section of the Home page */
+main{
+    background-color: #3A4752;
+    grid-area: main;
+    color:white;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 0 1.5em;
+}
+
+main h1{
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+/* button on the main section */
+.btn-1{
+    text-decoration: none;
+    background: wheat;
+    width: 300px;
+    height: 100px;
+    border: none;
+    color: black;
+    font-size: 1.5em;
+    outline: none;
+    margin: .5em 0;
+    padding: 0 10px;
+}
+
+/* Content part of the home page */
+/* Image styling */
+.content-img{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+}
+#content1{
+    background-color:lightblue;
+    grid-area: content1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 0 1.5em;
+    padding-bottom: .5em;
+}
+
+#content2{
+    background-color:lightblue;
+    grid-area: content2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 0 1.5em;
+    padding-bottom: .5em;
+}
+
+#content3{
+    background-color:lightblue;
+    grid-area: content3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 0 1.5em;
+    padding-bottom: .5em;
+}
+
+/* Lift Side of the Footer */
+
+.footer-left{
+    background-color: orange;
+    grid-area: footer1;
+    
+    padding-top: var(--main-padding);
+} 
+.footer-left .footer-link{
+    margin: 0;
+    padding-top: 0px;
+}
+.footer-left a{
+    color:  #ffffff;
+	margin: 10px 0 5px;
+    text-decoration: none;
+}
+.footer-left p{
+    color: #3A4752;
+}
+
+.footer-left h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+.footer-left h3 span{
+	color:  #3A4752;
+    padding-bottom: 0px;
+}
+/* End of Lift Section of the Footer */
+
+/* Start of the Middle section of the Footer */
+.footer-center{
+    background-color: orange;
+    grid-area: footer2;
+    
+    padding-top: var(--main-padding);
+} 
+
+.footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+.footer-center .add h5{
+    margin: 0;
+    text-align: left;
+    font: normal 25px 'Cookie', cursive;
+    color: #3A4752;
+    padding-top: 30px;
+
+}
+/*End of middle section */
+
+/* Start of the footer's right section */
+
+.footer-right{
+    background-color: orange;
+    grid-area: footer3;
+    
+    padding-top: var(--main-padding);
+} 
+
+.footer-right .about{
+    margin-left: 0;
+}
+
+.footer-right .about h5{
+    padding-top: 30px;
+    margin: 0;
+    text-align: left;
+    font: normal 25px 'Cookie', cursive;
+    color: #3A4752;
+}
+
+.footer-right .about p{
+    display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:10px 10px;
+}
+
+
+/* Media tag for makin Home Page responsive */
+@media only screen and (max-width: 550px) {
+    .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.5fr  1fr 1fr 1fr 0.2fr 0.2fr 0.2fr;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "content1"
+    "content2"
+    "content3"
+    "footer1"
+    "footer2"
+    "footer3";
+    }
+}
+
+/* Grid Container for Services */
+
+#services .container{
+    height: auto;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.12fr 2fr 1fr 0.4fr;
+    grid-template-areas: 
+        "nav nav nav"
+        "main main main"
+        "content content content"
+        "footer1 footer2 footer3";
+}
+
+#services main{
+    background-color: #3A4752;
+    grid-area: main;
+    color:white;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    padding: 0 1.5em;
+}
